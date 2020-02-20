@@ -1,0 +1,21 @@
+package com.epam.clean_code;
+
+public class interest_calc {
+	public int amount,time,rate;
+	interest_calc(int x,int y,int z){
+		amount=x;
+		time=y;
+		rate=z;
+	}
+	public int simple_interest() {
+		int result;
+		result=(amount*time*rate)/100;
+		return result;
+	}
+	public int compund_interest() {
+		int result;
+		int val=(int)Math.pow((double)(1+rate/100),(double)time);
+		result=amount*(val);
+		return result;
+	}
+}
